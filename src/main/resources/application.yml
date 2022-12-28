@@ -13,4 +13,4 @@ spring:
 ---
 spring:
   profiles:
-    include: db, common
+    include: db, common, kafka
