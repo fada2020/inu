@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(title, link, content,script)">
+
+<th:block th:replace="~{user/layout/header :: header(~{::title})}"></th:block>
+<th:block th:replace="~{user/layout/css :: css(~{::link})}"></th:block>
+<body>
+<th:block th:replace="~{user/layout/topbar :: topbar}"></th:block>
+<th:block th:replace="${content}"></th:block>
+<th:block th:replace="~{user/layout/sidebar :: sidebar(~{::title})}"></th:block>
+<th:block th:replace="~{user/layout/footer :: footer}"></th:block>
+<th:block th:replace="~{user/layout/scripts :: scripts(~{::script})}"></th:block>
+</body>
+</html>

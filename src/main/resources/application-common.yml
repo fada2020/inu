@@ -1,0 +1,16 @@
+spring:
+  session:
+    timeout: 300m
+  thymeleaf:
+    prefix : classpath:templates/
+    suffix : .html
+    cache : false
+
+  mvc:
+    static-path-pattern: /**
+    #    resources:
+    #      add-mappings: true
+    #      static-locations: classpath:/static/
+    hiddenmethod:
+      filter:
+        enabled: true

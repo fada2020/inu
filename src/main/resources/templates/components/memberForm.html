@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="memberForm(forms)">
+<form class="row" method="post" th:object="${forms}">
+  <div class="col-12">
+    <div class="mb-3">
+      <label th:for="${#ids.next('email')}"class="form-label">Email address</label>
+      <input type="email" class="form-control form-control-lg bg-gray-800 border-dark" th:field="*{email}"  aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label th:for="${#ids.next('pwd')}"  class="form-label">Password</label>
+      <input type="password" class="form-control form-control-lg bg-gray-800 border-dark" th:field="*{pwd}">
+    </div>
+    <div class="mb-3 form-check py-3">
+      <input type="checkbox" class="form-check-input" th:field="*{check}" th:value="1">
+      <label class="form-check-label" th:for="${#ids.prev('check')}">If you really don´t want any newsletter <strong>check this box</strong>. Then you just agree to receive our marketing mails and product stuff. If you check this box <strong>we will not send out our newsletter</strong> to you at all...on mondays.</label>
+    </div>
+    <button type="submit" class="btn btn-white btn-xl mb-4">Submit</button>
+  </div>
+</form>
+</html>

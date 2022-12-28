@@ -1,0 +1,16 @@
+server:
+  port: 8088
+---
+spring:
+  profiles:
+    group:
+      local: local
+---
+spring:
+  profiles:
+    group:
+      prod: prod
+---
+spring:
+  profiles:
+    include: db, common
